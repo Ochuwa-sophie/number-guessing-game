@@ -1,0 +1,13 @@
+C:\Users\HP\numberguessing\bin\Debug\netcoreapp3.1\numberguessing.exe
+C:\Users\HP\numberguessing\bin\Debug\netcoreapp3.1\numberguessing.deps.json
+C:\Users\HP\numberguessing\bin\Debug\netcoreapp3.1\numberguessing.runtimeconfig.json
+C:\Users\HP\numberguessing\bin\Debug\netcoreapp3.1\numberguessing.runtimeconfig.dev.json
+C:\Users\HP\numberguessing\bin\Debug\netcoreapp3.1\numberguessing.dll
+C:\Users\HP\numberguessing\bin\Debug\netcoreapp3.1\numberguessing.pdb
+C:\Users\HP\numberguessing\obj\Debug\netcoreapp3.1\numberguessing.csprojAssemblyReference.cache
+C:\Users\HP\numberguessing\obj\Debug\netcoreapp3.1\numberguessing.csproj.CoreCompileInputs.cache
+C:\Users\HP\numberguessing\obj\Debug\netcoreapp3.1\numberguessing.AssemblyInfoInputs.cache
+C:\Users\HP\numberguessing\obj\Debug\netcoreapp3.1\numberguessing.AssemblyInfo.cs
+C:\Users\HP\numberguessing\obj\Debug\netcoreapp3.1\numberguessing.dll
+C:\Users\HP\numberguessing\obj\Debug\netcoreapp3.1\numberguessing.pdb
+C:\Users\HP\numberguessing\obj\Debug\netcoreapp3.1\numberguessing.genruntimeconfig.cache
