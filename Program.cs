@@ -12,16 +12,21 @@ namespace numberguessing
             int correctNumber1 = 7;
             int correctNumber2 = 13;
             int correctNumber3 = 39;
-            int userGuess = 0;
-            int numberOfTrials = 0;
+            
+            
             
 
             Console.Write("Choose a level, 1 for Easy,2 for Medium, 3 for Hard : ");
             int level = int.Parse(Console.ReadLine());
             if (level == 1)
             {
+                int userGuess = 0;
+                int numberOfTrials = 0;
+                if(numberOfTrials < 6)
+           {
             while (userGuess != correctNumber1)
         {
+               
                 Console.Write("It is a number between 1 and 10, What is your guess : ");
                 int.TryParse(Console.ReadLine(), out userGuess );
 
@@ -35,12 +40,25 @@ namespace numberguessing
                      Console.WriteLine("You got it right!", userGuess);
                 }
         }
-
+        }
+        else if (numberOfTrials > 6)
+        {
+        Console.WriteLine("Game Over ");
+				 break;
+        }
+        else 
+        {
+        Console.WriteLine("The End");
         }
             else if (level == 2)
             {
-            while (userGuess != correctNumber2)
+                 int userGuess2 = 0;
+                int numberOfTrials2 = 0;
+                if(numberOfTrials2 < 4)
+			 {
+            while (userGuess2 != correctNumber2)
         {
+               
                 Console.Write("It is a number between 1 and 20, What is your guess : ");
                 int.TryParse(Console.ReadLine(), out userGuess );
 
@@ -54,15 +72,33 @@ namespace numberguessing
                      Console.WriteLine("You got it right!", userGuess);
                 }
         }
-
         }
+        else if(numberOfTrials2>4)
+        {Console.WriteLine("Game Over");
+        break;
+        }
+        else
+        {
+            Console.WriteLine ("The end");
+        }
+            }
 
          else if (level == 3)
+         
+			 {
             {
-            while (userGuess != correctNumber3)
+                 int userGuess3 = 0;
+                 int numberOfTrials2 = 0;
+                 if(numberOfTrials2 < 3)
+                 {
+                
+                 while (userGuess != correctNumber3)
         {
+               
+            
                 Console.Write("It is a number between 1 and 50, What is your guess : ");
                 int.TryParse(Console.ReadLine(), out userGuess );
+
 
                 if(userGuess > correctNumber3 || userGuess < correctNumber3)
                 {
@@ -74,8 +110,11 @@ namespace numberguessing
                      Console.WriteLine("You got it right!", userGuess);
                 }
         }
+        }
 
         }
         }
+            }
+            }
+        }
     }
-}    
