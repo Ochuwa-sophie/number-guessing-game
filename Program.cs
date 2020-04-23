@@ -20,43 +20,40 @@ namespace numberguessing
             int level = int.Parse(Console.ReadLine());
             if (level == 1)
             {
+            List<string> numberOfTrials = new List<string> ();
+            for (int i = 0; i < 7; i++ )
+            {
                 int userGuess = 0;
-                int numberOfTrials = 0;
-                if(numberOfTrials < 6)
-           {
+                
             while (userGuess != correctNumber1)
-        {
+            {
                
                 Console.Write("It is a number between 1 and 10, What is your guess : ");
                 int.TryParse(Console.ReadLine(), out userGuess );
 
                 if(userGuess > correctNumber1 || userGuess < correctNumber1)
                 {
-                    Console.WriteLine("That was wrong! You have " + numberOfTrials + "guesses left", userGuess);
+                    Console.WriteLine("That was wrong! You have " + i + "guesses left", userGuess);
                 }
-                
                 else
                 {
                      Console.WriteLine("You got it right!", userGuess);
                 }
-        }
-        }
-        else if (numberOfTrials > 6)
-        {
-        Console.WriteLine("Game Over ");
-				 break;
-        }
-        else 
-        {
-        Console.WriteLine("The End");
-        }
+                }
+
+                }
+            }
+            Console.WriteLine("Game Over");
+              
             else if (level == 2)
             {
-                 int userGuess2 = 0;
-                int numberOfTrials2 = 0;
-                if(numberOfTrials2 < 4)
+                List<string> numberOfTrials2 = new List<string> ();
+            for (int i = 0; i < 5; i++ )
+            {
+                int userGuess = 0;
+                
 			 {
-            while (userGuess2 != correctNumber2)
+            while (userGuess != correctNumber2)
         {
                
                 Console.Write("It is a number between 1 and 20, What is your guess : ");
@@ -64,33 +61,27 @@ namespace numberguessing
 
                 if(userGuess > correctNumber2 || userGuess < correctNumber2)
                 {
-                    Console.WriteLine("That was wrong, you have " + numberOfTrials + " guesses left.", userGuess);
+                    Console.WriteLine("That was wrong, you have " + i + " guesses left.", userGuess);
                 }
                
                 else
                 {
                      Console.WriteLine("You got it right!", userGuess);
                 }
-        }
-        }
-        else if(numberOfTrials2>4)
-        {Console.WriteLine("Game Over");
-        break;
-        }
-        else
-        {
-            Console.WriteLine ("The end");
-        }
+
             }
+             }
+            }
+            Console.WriteLine("Game Over");
 
          else if (level == 3)
          
 			 {
             {
-                 int userGuess3 = 0;
-                 int numberOfTrials2 = 0;
-                 if(numberOfTrials2 < 3)
-                 {
+                List<string> numberOfTrials = new List<string> ();
+            for (int i = 0; i < 7; i++ )
+            {
+                int userGuess = 0;
                 
                  while (userGuess != correctNumber3)
         {
@@ -102,7 +93,7 @@ namespace numberguessing
 
                 if(userGuess > correctNumber3 || userGuess < correctNumber3)
                 {
-                    Console.WriteLine("That was wrong, you have " + numberOfTrials + "guesses left.", userGuess);
+                    Console.WriteLine("That was wrong, you have " + i + "guesses left.", userGuess);
                 }
               
                 else
