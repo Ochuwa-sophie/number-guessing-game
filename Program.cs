@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace numberguessing
 {
@@ -9,111 +6,153 @@ namespace numberguessing
     {
         static void Main(string[] args)
         { 
-            int correctNumber1 = 7;
-            int correctNumber2 = 13;
-            int correctNumber3 = 39;
-            
-            
-            
-
+          
             Console.Write("Choose a level, 1 for Easy,2 for Medium, 3 for Hard : ");
             int level = int.Parse(Console.ReadLine());
+
             if (level == 1)
             {
-            List<int> numberOfTrials = new List<int> ();
-            for (int i = 6; i < 7; i-- )
-            {
-               int userGuess = 0;
-                
-            while (userGuess != correctNumber1)
-            {
-               
-                Console.Write("It is a number between 1 and 10, What is your guess : ");
-                int.TryParse(Console.ReadLine(), out userGuess );
+                try {
+                    Random random = new Random ();  
+                    int randomNumber = random.Next (1, 11);
+                    int guess = 0;
+                    int numberOfGuess = 6;
+                    bool gameOver = false;
 
-                if(i > correctNumber1 || userGuess < correctNumber1)
-                {
-                    Console.WriteLine("That was wrong! You have " + i + "guesses left", userGuess);
-                }
-            
-                else
-                {
-                     Console.WriteLine("You got it right!", userGuess);
-                }
-                }
-                if (numberOfTrials [i] == 6)
-                {
-                    Console.WriteLine("Game Over");
-                }
-                }
-                
-               
+                    Console.WriteLine (" Easy mode: It is a number between 1 and 10, What is your guess : ");    
+
+                    while (gameOver == false) {
+                        guess = Convert.ToInt32 (Console.ReadLine ());
+                        numberOfGuess--;
+
+                        if (guess != randomNumber && numberOfGuess == 0) 
+                        {
+                            Console.WriteLine ("You've used up Your 6 Guess chances....GAME OVER!!");
+                            gameOver = true;
+                        } 
+                            else if (guess == randomNumber) 
+                        {
+                            Console.WriteLine ("YOU WIN");
+                            gameOver = true;
+                        }   
+                            else if (guess > randomNumber) 
+                        {
+                            Console.WriteLine ("Number too high ,  Go low!");
+                        }  
+                             else if (guess < randomNumber) 
+                        {
+                            Console.WriteLine ("Number too low ,  Go high!");
+                        }
+
+                                              
+                            Console.ReadLine ();
+                    }
+                        }   catch (FormatException) {
+                    Console.WriteLine ("Wrong Input... PLEASE ENTER A NUMBER.");
+                                                    }
             }
+
+               
             else if(level == 2)
             {
-                 List<string> numberOfTrials2 = new List<string> ();
-            for (int i = 0; i < 5; i++ )
-            {
+                try {
+                        Random random = new Random ();  
+                        int randomNumber = random.Next (1, 21);
+                        int guess = 0;
+                        int numberOfGuess = 4;
+                        bool gameOver = false;
 
+                        Console.WriteLine (" Easy mode: It is a number between 1 and 20, What is your guess : ");    
+
+                        while (gameOver == false) 
+                    {
+                        guess = Convert.ToInt32 (Console.ReadLine ());
+                        numberOfGuess--;
+
+                        if (guess != randomNumber && numberOfGuess == 0) 
+                    {
+                            Console.WriteLine ("You've used up Your 4 Guess chances....GAME OVER!!");
+                            gameOver = true;
+                    }   
+                        else if (guess == randomNumber)
+                    {
+                            Console.WriteLine ("YOU WIN");
+                            gameOver = true;
+                    } 
+                        else if (guess > randomNumber) 
+                    {
+                            Console.WriteLine ("Number too high ,  Go low!");
+                    }   
+                        else if (guess < randomNumber) 
+                    {
+                            Console.WriteLine ("Number too low ,  Go high!");
+                    }
+
+                    }
+                            Console.ReadLine ();
+                    }   
+                        catch (FormatException) 
+                    {
+                        Console.WriteLine ("Wrong Input... PLEASE ENTER A NUMBER.");
+                    }
                 
-			 {
-            while (i != correctNumber2)
-        {
-               
-                Console.Write("It is a number between 1 and 20, What is your guess : ");
-                int.TryParse(Console.ReadLine(), out i );
-
-                if(i > correctNumber2 || i < correctNumber2)
-                {
-                    Console.WriteLine("That was wrong, you have " + i + " guesses left.", i);
-                }
-               
-                else
-                {
-                     Console.WriteLine("You got it right!", i);
-                }
-
             }
-             }
-            }
-            Console.WriteLine("Game Over");
-            }
-            
             else if (level == 3)
          
-			 {
-            {
-                List<string> numberOfTrials = new List<string> ();
-            for (int i = 0; i < 7; i++ )
-            {
-               
-                
-                 while (i != correctNumber3)
+		{
+            try 
         {
-               
-            
-                Console.Write("It is a number between 1 and 50, What is your guess : ");
-                int.TryParse(Console.ReadLine(), out i );
+                Random random = new Random ();  
+                int randomNumber = random.Next (1, 51);
+                int guess = 0;
+                int numberOfGuess = 3;
+                bool gameOver = false;
 
+                    Console.WriteLine (" Easy mode: It is a number between 1 and 50, What is your guess : ");    
 
-                if(i > correctNumber3 || i < correctNumber3)
-                {
-                    Console.WriteLine("That was wrong, you have " + i + "guesses left.", i);
-                }
+            while (gameOver == false) 
+        {
+                guess = Convert.ToInt32 (Console.ReadLine ());
+                numberOfGuess--;
+
+                if (guess != randomNumber && numberOfGuess == 0) 
+        {
+                Console.WriteLine ("You've used up Your 6 Guess chances....GAME OVER!!");
+                gameOver = true;
+        }       
+                else if (guess == randomNumber) 
+        {
+                Console.WriteLine ("YOU WIN");
+                gameOver = true;
+        } 
+                else if (guess > randomNumber) 
+        {
+                Console.WriteLine ("Number too high ,  Go low!");
+                Console.ReadLine ();
+        } 
+                else if (guess < randomNumber) 
+        {
+                Console.WriteLine ("Number too low ,  Go high!");
+                Console.ReadLine ();
+        }
+ 
+        }
+        }      
+                catch (FormatException) 
+        {
+                    Console.WriteLine ("Wrong Input... PLEASE ENTER A NUMBER.");
+        }
+        }
               
-                else
-                {
-                     Console.WriteLine("You got it right!", i);
-                }
-        }
-        }
-
-        }
-        }
-            
+            else 
+            {
+                Console.WriteLine("Please press enter and play the game again." );
+                Console.ReadKey();
+            }
 
         } 
            
     }
 }
+
            
